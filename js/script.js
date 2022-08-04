@@ -80,7 +80,7 @@ switch (accion){
         alert(`La raíz cuadrada de ${num1} es : ${Math.sqrt(num1).toFixed(2)}`);
     break;
     case "f":
-        alert(`La potencia de ${num1}^${num2} es : ${Math.pow(num1, num2).toFixed(2)}`)
+        alert(`La potencia de ${num1}^${num2} es : ${Math.pow(num1, num2).toFixed(2)}`);
     break;
     default:
         alert(`Accion invalida`);
