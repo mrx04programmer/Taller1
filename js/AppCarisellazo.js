@@ -38,7 +38,13 @@ do{
         dinero_inicial = dinero_inicial - dinero;
         
     }
+    // Si el dinero es menor a 0 , se quedara sin saldo, de lo contrario mostrara el dinero actual.
+    if (dinero_inicial < 0){
+        alert(`Lo siento pero te quedaste sin saldo.`)
+    }
+    else{
     alert(`Usted tiene ${dinero_inicial}`);
+    }
     
     rep = confirm("Deseas continuar?");
     v = v+1
