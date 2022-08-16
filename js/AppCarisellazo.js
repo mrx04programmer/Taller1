@@ -1,14 +1,17 @@
 // Carisellazo en javascript
 
-let dinero, c=0, ds, juegostr, rep;
+let dinero_inicial, dinero, ds, juegostr, rep, v=0;
 let cara = 1;
 let sello = 2;
+
+dinero_inicial = parseInt(prompt("Dinero inicial:"));
 do{
-    ds = parseInt(prompt("Decisión\n1)Cara \n2)Sello"));
+    
     dinero = parseInt(prompt("Cuanto desea apostar?:"));
+    ds = parseInt(prompt("Decisión\n1)Cara \n2)Sello"));
     // Establecer String para variable juego
     
-    juego = parseInt(Math.floor(Math.random() * (sello - cara + 1) + 1));// Número aleatorio:
+    juego = parseInt(Math.floor(Math.random() * (sello - cara + 1) + 1));// Número aleatorio.
     console.log(juego);
     if (juego == 1){
         juegostr = "Cara";
@@ -18,21 +21,28 @@ do{
     }
 
     // Gano?
+    
     if (juego == 1 && juego == ds){
         alert(`Ganaste , callo Cara`);
-        c=c+(dinero*2);
-        alert(`Usted tiene ${c}`);
+        // dinero_inicial=dinero_inicial+(dinero*2); 
+        dinero_inicial=dinero_inicial+(dinero); 
+        //alert(`Usted tiene ${dinero_inicial}`);
 
     }
     else if (juego == 2 && juego == ds){
         alert(`Ganaste, callo Sello`);
-        c = c + (dinero * 2);
-        alert(`Usted tiene ${c}`);
+        dinero_inicial=dinero_inicial+(dinero); 
+        //alert(`Usted tiene ${dinero_inicial}`);
     } else{
         alert(`Perdiste, callo ${juegostr}`);
-        c = c - dinero;
-        alert(`Usted tiene ${c}`);
+        dinero_inicial = dinero_inicial - dinero;
+        
     }
+    alert(`Usted tiene ${dinero_inicial}`);
     
     rep = confirm("Deseas continuar?");
+    v = v+1
+    
 }while(rep==true);
+
+alert(`Usted a repetido el programa ${v}`);
