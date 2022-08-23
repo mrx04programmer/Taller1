@@ -1,0 +1,87 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap');
+:root{
+    --default: url('../img/montain.jpg');
+    --encima: #63b1df;
+    --buttons: #114e72;
+    --blanco:#ffffff;
+
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', sans-serif;
+    background-image: var(--default);
+    background-size: 150% 150vh;
+}
+
+
+
+#menu, #dash{
+    margin-left: 1em;
+    border-radius: 20px;
+    background-color: var(--encima);
+    opacity: 85%;
+    
+}
+
+#menu{
+    width: 20%;
+    padding: 1em;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+#menu > img{
+    opacity: 100%;
+}
+
+#menu > h2{
+    text-align: center;
+}
+
+
+.button{
+    background-color: var(--buttons);
+    border-radius: 20px;
+    margin: 5px;
+    text-decoration: none;
+    color:var(--blanco);
+    padding: 1em;
+    text-align: center;
+    opacity: 100%;
+}
+
+.button:hover{
+    background-color: var(--blanco);
+    color: var(--negro);
+    transition: 0.5s;
+}
+
+#dash{
+    width: 73%;
+    padding: 1em;
+    
+}
+
+.notify{
+    display: flex;
+    justify-items: center;
+    background-color: var(--blanco);
+    color: #000;
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+/* Calculadora:*/
+#dash-calc{
+    padding: 1em;
+    margin-left: 1em;
+    border-radius: 20px;
+    background-color: var(--encima);
+    opacity: 85%;
+    width: 200%;
+}

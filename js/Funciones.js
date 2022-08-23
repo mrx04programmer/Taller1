@@ -59,11 +59,14 @@ let ganar=function(saldo, apuesta){
 
 
 // Función por expresión:
-/*
+
 let lanzarmoneda=function lanzarmoneda(){
     let moneda = Math.floor(Math.random() * 2) + 1;
     return moneda;
 }
+
+let lanzamoneda  = lanzarmoneda();
+
 let s = true;
 let saldo=0;
 let nombre = prompt("Ingresa el nombre del jugador:");
@@ -91,7 +94,7 @@ while(s==true){
 
     s = confirm(`¿Desea continuar?`);
 }
-*/
+
 
 
 // Función flecha: La flecha creada con => hace referencia a la palabra reservada function
