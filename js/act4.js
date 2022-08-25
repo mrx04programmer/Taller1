@@ -12,7 +12,7 @@ respuesta es incorrecta.
 const btn = document.querySelector('button');
 const div = document.getElementById('divasa');
 btn.addEventListener('click', (e)=>{
-    e.preventDefault();
+    e.preventDefault(); // Trabajar en vivo.
     const nombres = document.getElementById('nombres').value;
     const apellidos = document.getElementById('apellidos').value;
     const materias = document.getElementById('materias').value;
