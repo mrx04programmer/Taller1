@@ -1,5 +1,4 @@
-@import
-url('https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root{
     --default: url('../img/montain.jpg');
     --encima: #63b1df;
@@ -13,7 +12,7 @@ body{
     flex-direction: row;
     font-family: 'Roboto', sans-serif;
     background-image: var(--default);
-    background-size: 150% 150vh;
+    background-size: 200% 300vh;
 }
 
 
@@ -121,53 +120,77 @@ body{
 }
 
 /* ejercicio 6*/
+
 #forms{
-    text-align: left;
-    font-size: 1.2em;
+    font-size: 1.2em;  
+    text-align: center;
 }
 
-input[name="tipodoc"]{
-    margin-left: 3%;
-    margin-right: 4%;
-}
-
-input[name="nombre"]{
-    margin-left: 11%;
-    margin-right: 4%;
-}
-input[name="fechaNacimiento"]{
-    margin-left: 3%;
-    margin-right: 6%;
-}
-
-input[name="password"]{
-    margin-left: 8%;
-    margin-right: 4%;
-}
-
-input[name="nodoc"]{
-    margin-left: 4%;
-}
-input[name="apellido"]{
-    margin-left: 11%;
-}
-
-input[name="correo"]{
-    margin-left: 5%;
-}
-
-input{
+input, select{
     margin-top:2%;
+    margin-left: 25%;
 }
 
-.especials_inputs{
+.submiter{
+    background-color: #082345;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    margin: auto 30%;
+    width: 150px;
+}
+
+.especials_inputs, select{
     background: #fff;
     opacity: 80%;
     outline: none;
     color: #000;
-    padding: 5px;
+    padding: 10px;
     border-radius: 20px;
     border: none;
-    border-top: none;
     border-bottom: 3px rgb(6, 48, 104) solid;
+    
+    width: 250px;
+}
+
+.especials_inputs:focus{
+    outline: none;
+    background-color: rgba(198, 198, 198, 0.681);
+    border-bottom: 3px rgb(0, 56, 130) solid;
+}
+
+.msn-error{
+    color: red;
+    font-size: 15px;
+    visibility: hidden;
+}
+
+.form-inputs{
+    width: 500px;
+    position:relative;
+    margin: 0 auto;
+}
+.frm-icono{
+    position: absolute;
+    right: 9rem;
+    top:25%;
+    z-index: 100;
+}
+
+input[name="terms"]{
+    margin: 10px;
+}
+
+.success .frm-icono{
+    color: rgb(61, 174, 33);
+}
+
+.error .frm-icono{
+    color: red;
+}
+
+.msn-error-visible{
+    visibility: visible;
+
 }
