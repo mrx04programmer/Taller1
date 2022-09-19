@@ -31,8 +31,8 @@
               <h5 class="card-title text-center">Triangulo</h5>
               <!--<p class="card-text">asas</p>-->
                 <center>
-                    <button id="abrirModal" class="btn btn-primary">Calcular Perímetro</button><br><br>
-                    <a href="#" class="calcular">Calcular área</a>
+                    <button id="tPerimetro" class="btn btn-primary">Calcular Perímetro</button><br><br>
+                    <a href="#" class="calcular" id="tArea">Calcular área</a>
                 </center>
             </div>
           </div>
@@ -43,8 +43,8 @@
               <h5 class="card-title text-center">Cuadrado</h5>
               <!--<p class="card-text">asas</p>-->
                 <center>
-                  <button id="abrirModal" class="btn btn-primary">Calcular Perímetro</button><br><br>
-                  <a href="#" class="calcular">Calcular área</a>
+                  <button id="cuPerimetro" class="btn btn-primary">Calcular Perímetro</button><br><br>
+                  <a href="#" class="calcular" id="cuArea">Calcular área</a>
                 </center>
             </div>
           </div>
@@ -55,8 +55,8 @@
               <h5 class="card-title text-center">Rectángulo</h5>
               <!--<p class="card-text">asas</p>-->
                 <center>
-                  <button id="abrirModal" class="btn btn-primary">Calcular Perímetro</button><br><br>
-                    <a href="#" class="calcular">Calcular área</a>
+                  <button id="rPerimetro" class="btn btn-primary">Calcular Perímetro</button><br><br>
+                    <a href="#" class="calcular" id="rArea">Calcular área</a>
                 </center>
             </div>
           </div>
@@ -67,22 +67,82 @@
               <h5 class="card-title text-center">Circulo</h5>
               <!--<p class="card-text">asas</p>-->
                 <center>
-                    <button id="abrirModal" class="btn btn-primary">Calcular Perímetro</button><br><br>
-                    <a href="#" class="calcular">Calcular área</a>
+                    <button id="ciPerimetro" class="btn btn-primary">Calcular Perímetro</button><br><br>
+                    <a href="#" class="calcular" id="ciArea">Calcular área</a>
                 </center>
             </div>
           </div>
         </div>
 </div>
-
-<div id="ventanaModal" class="modales">
-  <div class="contenidoModal">
-    <span class="cerrarModal"><i class="fa-solid fa-xmark"></i></span>
-      <h2>Ventana Modal</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magnam culpa cum veritatis pariatur aliquam, numquam adipisci, minima, eveniet aut minus corrupti nobis! Optio incidunt corrupti laudantium voluptatibus nisi sunt.</p>
-
-
+<!-- Modal Triangulo-->
+<div id="tPerimetroModal" class="modals">
+  <span class="c1"><i class="fa-solid fa-xmark"></i></span>
+  <label for="lado1">Lado 1:</label><input class="form-control" type="text" name="lado1" id="lado1t">
+  <label for="lado2">Lado 2:</label><input class="form-control" type="text" name="lado2" id="lado2t">
+  <label for="lado3">Lado 3:</label><input class="form-control" type="text" name="lado3" id="lado3t">
+  <input type="submit" value="Calcular" class="btn btn-primary m-3" id="calcular1">
+  <div class="respuestat">
   </div>
+</div>
+<div id="tAreaModal" class="modals">
+  <span class="c2"><i class="fa-solid fa-xmark"></i></span>
+  <label for="base">Base:</label><input class="form-control" type="text" name="base" id="base">
+  <label for="altura">Altura:</label><input class="form-control" type="text" name="altura" id="altura">
+  <input type="submit" value="Calcular" class="btn btn-primary m-3" id="calcular2">
+  <div class="respuestat2">
+  </div>
+</div>
+<!-- Modal Cuadrado-->
+<div id="cuPerimetroModal" class="modals">
+  <span class="c3"><i class="fa-solid fa-xmark"></i></span>
+  <label for="lado1">Lado 1:</label><input class="form-control" type="text" id="lado1c">
+  <label for="lado2">Lado 2:</label><input class="form-control" type="text" id="lado2c">
+  <label for="lado3">Lado 3:</label><input class="form-control" type="text" id="lado3c">
+  <label for="lado4">Lado 4:</label><input class="form-control" type="text" id="lado4c">
+  <input type="submit" value="Calcular" class="btn btn-primary m-3" id="calcular3">
+  <div class="respuestacu">
+  </div>
+</div>
+<div id="cuAreaModal" class="modals">
+  <span class="c4"><i class="fa-solid fa-xmark"></i></span>
+  <label for="lado1">Lado 1:</label><input class="form-control" type="text" id="lado1ca">
+  <label for="lado2">Lado 2:</label><input class="form-control" type="text" id="lado2ca">
+  <input type="submit" value="Calcular" class="btn btn-primary m-3" id="calcular4">
+  <div class="respuestacu2">
+  </div>
+</div>
+<!-- Modal Rectangulo-->
+<div id="rPerimetroModal" class="modals">
+  <span class="c5"><i class="fa-solid fa-xmark"></i></span>
+  <label for="longitud">Longitud:</label><input class="form-control" type="text" name="longitud" id="longitud">
+  <label for="ancho">Ancho:</label><input class="form-control" type="text" name="ancho" id="ancho">
+  <input type="submit" value="Calcular" class="btn btn-primary m-3" id="calcular5">
+  <div class="respuestar">
+  </div>
+</div>
+<div id="rAreaModal" class="modals">
+  <span class="c6"><i class="fa-solid fa-xmark"></i></span>
+  <label for="longitud">Longitud:</label><input class="form-control" type="text" name="longitud" id="longitud2">
+  <label for="ancho">Ancho:</label><input class="form-control" type="text" name="ancho" id="ancho2">
+  <input type="submit" value="Calcular" class="btn btn-primary m-3" id="calcular6">
+  <div class="respuestar2">
+  </div>
+</div>
+<!-- Modal Circulo-->
+<div id="ciPerimetroModal" class="modals">
+  <span class="c7"><i class="fa-solid fa-xmark"></i></span>
+  <label for="diametro">Radio:</label><input class="form-control" type="text" name="radio" id="diametro">
+  <input type="submit" value="Calcular" class="btn btn-primary m-3" id="calcular7">
+  <div class="respuestaci">
+  </div>
+</div>
+<div id="ciAreaModal" class="modals">
+  <span class="c8"><i class="fa-solid fa-xmark"></i></span>
+  <label for="radio">Radio:</label><input class="form-control" type="text" name="radio" id="radio">
+  <input type="submit" value="Calcular" class="btn btn-primary m-3" id="calcular8">
+  <div class="respuestaci2">
+  </div>
+</div>
 
 </div>
 <script src="../js/act5.js"></script>

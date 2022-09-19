@@ -175,13 +175,13 @@ body{
     to {top: 0; opacity: 1;}
 }
 
-.cerrarModal{
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8{
     font-size: 2rem;
     float: right;
     
 }
 
-.cerrarModal:hover{
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8:hover{
     cursor: pointer;
 }
 
@@ -214,3 +214,20 @@ body{
     border-bottom: 3px rgb(80, 96, 243) solid;
 }
 
+/* Ejercicio 5 */
+.modals{
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#tPerimetroModal,#cuPerimetroModal, #ciPerimetroModal, #rPerimetroModal{
+    visibility: hidden;
+}
+#tAreaModal, #cuAreaModal, #ciAreaModal, #rAreaModal{
+    visibility: hidden;
+}
