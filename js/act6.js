@@ -11,6 +11,15 @@ const reglas = {
     correo: /^[a-zA-Z0-9_+-.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //CORREOS
     password: /^(?=.+\d)(?=.*[#$%&!@])(?=.*[a-z])(?=.*[A-Z]).{8,}$/ //PASSWORD
 }
+const inputs = {
+    nodoc: false,
+    nombre: false,
+    apellido: false,
+    correo: false,
+    telefono: false,
+    password1: false,
+    password2: false
+}
 
 let form = document.getElementById("forms");
 let campos = document.querySelectorAll("#forms input");
@@ -18,10 +27,27 @@ let campos = document.querySelectorAll("#forms input");
 
 form.addEventListener('submit', e=>{
     e.preventDefault();
-    alert("Se envio formulario");
+    //alert("Se envio formulario");
+    
     
 
     });
+const validaContraseña=()=>{
+    const password1 = document.getElementById("password1").value;
+    const password2 = document.getElementById("password2").value;
+    if (password1==password2){
+        document.querySelector(`#e-password2`).classList.remove("error");
+        document.querySelector(`#e-password2`).classList.add("success");
+        document.querySelector(`#e-password2 i`).classList.remove("fa-circle-exclamation");
+        document.querySelector(`#e-password2 i`).classList.add("fa-circle-check");
+        document.querySelector(`#e-password2 .msn-error`).classList.remove("msn-error-visible");
+    }
+    else{
+        document.querySelector(`#e-password2`).classList.remove("success");
+        document.querySelector(`#e-password2`).classList.add("error");
+        
+    }
+}
 
 const validarInput=(regla, input, grupo)=>{
     if(regla.test(input.value)){
@@ -58,13 +84,16 @@ const validarCampos=(e)=>{
             validarInput(reglas.numeros, e.target, e.target.name);
             break;
         case "password":
-            
+            validarInput(reglas.numeros, e.target, e.target.name);
+            break;
+        case "password2":
+            validarInput(reglas.numeros, e.target, e.target.name);
+            validaContraseña();
             break;
 }
 }
 
 campos.forEach((campo)=>{
     campo.addEventListener("keyup", validarCampos); // Evento al presionar una tecla
-
     campo.addEventListener("blur", validarCampos); // Evento 
 });
