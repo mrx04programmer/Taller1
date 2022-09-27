@@ -27,7 +27,7 @@ let campos = document.querySelectorAll("#forms input");
 
 form.addEventListener('submit', e=>{
     e.preventDefault();
-    //alert("Se envio formulario");
+    alert("Se registro usuario");
     
     
 
