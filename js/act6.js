@@ -84,10 +84,10 @@ const validarCampos=(e)=>{
             validarInput(reglas.numeros, e.target, e.target.name);
             break;
         case "password":
-            validarInput(reglas.numeros, e.target, e.target.name);
+            validarInput(reglas.password, e.target, e.target.name);
             break;
         case "password2":
-            validarInput(reglas.numeros, e.target, e.target.name);
+            validarInput(reglas.password, e.target, e.target.name);
             validaContraseña();
             break;
 }
